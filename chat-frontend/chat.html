@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css">
+    <script src="chat.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Chat</title>
+</head>
+<body>
+
+<div class="chat-container container relative mx-auto mt-5 w-[80vw] min-h-[80vh] rounded-lg">
+    <div class="flex items-center">
+        <h2 class="text-2xl m-4 text-slate-700 font-sans italic">Pretty <span class="text-blue-500 font-semibold">Chat</span></h2>
+        <img src="./comment.svg" alt="logo comment dotted" srcset="" class="h-8 hover:">
+    </div>
+    
+    <div class="messages rounded-md text-slate-700 overflow-y-auto max-h-[54vh] shadow-md" id="messages"></div>
+    
+    <div class="absolute flex flex-col md:flex-row gap-4 left-0 bottom-0 p-6 bg-sky-50 w-full rounded-md">
+
+        <input type="text" id="nickname" placeholder="Seu Apelido" class="min-w-full md:min-w-[15vw] outline-none focus:ring focus:ring-2 focus:ring-blue-300 rounded-lg p-2 bg-slate-50 shadow-lg duration-100 max-h-[6vh]">
+
+        <input type="text" id="message" placeholder="Sua mensagem" onkeypress="teclaPressionada()" class="min-w-full md:min-w-[20vw] outline-none focus:ring focus:ring-2 focus:ring-blue-300 rounded-lg p-2 bg-slate-50 shadow-lg duration-100 max-h-[6vh]">
+        
+        <button onclick="enviarMensagen()" class="bg-blue-400 shadow-xl rounded-md text-white font-semibold tracking-wider hover:bg-blue-500 duration-100 p-2 max-h-[6vh] w-full md:max-w-[10vw]">Send</button>
+        <button onclick="enviarMensagenRd()" class="bg-blue-400 shadow-xl rounded-md text-white font-semibold tracking-wider hover:bg-blue-500 duration-100 p-2 max-h-[6vh] w-full md:max-w-[10vw]">Send - endpoint 2</button>
+
+    </div>
+</div>
+
+<script>
+    setInterval(carregarMensagens, 3000);
+</script>
+
+</body>
+</html>

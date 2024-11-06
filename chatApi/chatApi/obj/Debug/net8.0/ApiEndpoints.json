@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "chatApi.Controllers.ChatController",
+    "Method": "GetMessages",
+    "RelativePath": "Chat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[chatApi.Controllers.Mensagem, chatApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "chatApi.Controllers.ChatController",
+    "Method": "PostMessage",
+    "RelativePath": "Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newMessage",
+        "Type": "chatApi.Controllers.Mensagem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "chatApi.Controllers.ChatController",
+    "Method": "PostMessageRd",
+    "RelativePath": "Chat/message_redundancy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newMessage",
+        "Type": "chatApi.Controllers.Mensagem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
